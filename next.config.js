@@ -12,7 +12,7 @@ const { protocol, hostname, port, pathname } = new URL(
 /** @type {import('next').NextConfig} */
 module.exports = {
   images: {
-    domains: ['2.gravatar.com', 'meincken.local'],
+    domains: ['2.gravatar.com', 'meincken.local', 'meincken.vercel.app'],
     remotePatterns: [
       {
         protocol: protocol.slice(0, -1),
