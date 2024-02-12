@@ -16,7 +16,7 @@ export const CoverImage = ({ title, coverImage, slug }: Props) => {
   const image = (
     <Image
       width={2000}
-      height={1000}
+      height={350}
       alt={`Cover Image for ${title}`}
       src={coverImage?.node.sourceUrl}
       className={cn("shadow-small", {

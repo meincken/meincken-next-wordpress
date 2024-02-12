@@ -17,7 +17,7 @@ export const Avatar = ({ author }) => {
           alt={name}
         />
       </div>
-      <div className="text-xl font-bold">{name}</div>
+      <div className="text-xl font-bold">{author.node.name}</div>
     </div>
   );
 }
