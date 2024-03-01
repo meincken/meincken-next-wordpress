@@ -1,5 +1,5 @@
-import { Avatar, Date, CoverImage } from '@/components/Elements'
 import Link from "next/link";
+import { Avatar, Date, CoverImage } from '@/components/Elements'
 
 export const HeroPost = ({
   title,
