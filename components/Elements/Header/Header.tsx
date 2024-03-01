@@ -1,4 +1,3 @@
-// import Link from "next/link";
 import styles from './Header.modules.css'
 import { CMS_NAME } from "@/lib/constants"
 
@@ -22,7 +21,7 @@ export const Header = () => {
           </div>
         </div>
         <div id="navbar-collapse-with-animation" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
-          <div className={`${styles.link} flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7`}>
+          <div className={`flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7`}>
             <a className={styles.link} href="/about/">About</a>
             <a className={styles.link} href="/blog/">Blog</a>
           </div>
