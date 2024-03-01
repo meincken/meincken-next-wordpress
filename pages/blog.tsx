@@ -1,6 +1,6 @@
 import Head from "next/head"
 import { GetStaticProps } from "next"
-import { Container, HeroPost, Intro, Layout, MoreStories, Header } from "@/components/Elements/"
+import { Container, HeroPost, Intro, Layout, MoreStories } from "@/components/Elements/"
 import { getAllPostsForHome } from "@/lib/api"
 import { CMS_NAME } from "@/lib/constants"
 
@@ -13,7 +13,6 @@ export default function Index({ allPosts: { edges } }) {
       <Head>
         <title>{CMS_NAME}</title>
       </Head>
-      <Header />
       <Layout>
         <Container>
           {heroPost && (

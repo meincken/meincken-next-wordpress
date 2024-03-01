@@ -1,12 +1,11 @@
-// import { Container } from "@/components/Elements";
-// import { EXAMPLE_PATH } from "../../../lib/constants";
+import { CMS_NAME } from "@/lib/constants"
 
 export const Footer = () => {
   return (
-    <footer className="w-full  mx-auto">
+    <footer className="w-full bg-zinc-950 mx-auto py-3">
       <div className="text-center">
         <div>
-          <a className="flex-none text-xl font-semibold text-black dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#" aria-label="Brand">Brand</a>
+          <a className="flex-none text-xl font-semibold text-black dark:text-white dark:focus:outline-none uppercase dark:focus:ring-1 dark:focus:ring-gray-600" href="#" aria-label="Brand">{CMS_NAME}</a>
         </div>
 
         <div className="mt-3">

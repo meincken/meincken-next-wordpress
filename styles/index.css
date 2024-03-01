@@ -43,19 +43,23 @@
 .wp-block-image img {
   @apply max-w-full mt-2;
 }
+
 .wp-block-image.aligncenter {
   @apply text-center;
 }
+
 .wp-block-image.alignfull img,
 .wp-block-image.alignwide img {
   @apply w-full;
 }
+
 .wp-block-image .alignleft,
 .wp-block-image .alignright,
 .wp-block-image .aligncenter,
 .wp-block-image.is-resized {
   @apply table ml-0 mr-0;
 }
+
 .wp-block-image .alignleft > figcaption,
 .wp-block-image .alignright > figcaption,
 .wp-block-image .aligncenter > figcaption,
@@ -68,9 +72,11 @@
 .wp-block-image .alignleft {
   @apply float-left mr-4;
 }
+
 .wp-block-image .alignright {
   @apply float-right ml-4;
 }
+
 .wp-block-image .aligncenter {
   @apply m-auto;
 }
@@ -101,4 +107,43 @@
 
 .wp-block-media-text {
   @apply grid grid-cols-2 gap-4;
+}
+
+h1 {
+  @apply
+    text-6xl
+}
+
+h2 {
+  @apply
+    text-5xl
+}
+
+h3 {
+  @apply
+    text-4xl
+}
+
+h4 {
+  @apply
+    text-3xl
+}
+
+h5 {
+  @apply
+    text-2xl
+}
+
+h6 {
+  @apply
+    text-xl
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-size: 65%;
 }

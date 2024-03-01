@@ -1,43 +1,25 @@
 import Head from "next/head"
-import { GetStaticProps } from "next"
-import { Container, HeroPost, Intro, Layout, MoreStories, Header } from "@/components/Elements/"
-import { getAllPostsForHome } from "@/lib/api"
+import { Container, Layout, Header } from "@/components/Elements/"
 import { CMS_NAME } from "@/lib/constants"
 
-export default function Index({ allPosts: { edges } }) {
-  const heroPost = edges[0]?.node;
-  const morePosts = edges.slice(1);
+export default function Index() {
 
   return (
     <>
       <Head>
         <title>{CMS_NAME}</title>
       </Head>
-      <Header />
       <Layout>
         <Container>
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.featuredImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
+          <h1>{CMS_NAME} <small>test</small></h1>
+          <h2>{CMS_NAME} <small>test</small></h2>
+          <h3>{CMS_NAME} <small>test</small></h3>
+          <h4>{CMS_NAME} <small>test</small></h4>
+          <h5>{CMS_NAME} <small>test</small></h5>
+          <h6>{CMS_NAME} <small>test</small></h6>
+          <p></p>
         </Container>
       </Layout>
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
-  const allPosts = await getAllPostsForHome(preview);
-
-  return {
-    props: { allPosts },
-    revalidate: 10,
-  };
-};
