@@ -1,5 +1,5 @@
 // import Link from "next/link";
-import styles from './Header.module.css'
+import styles from './Header.modules.css'
 import { CMS_NAME } from "@/lib/constants"
 
 export const Header = () => {
