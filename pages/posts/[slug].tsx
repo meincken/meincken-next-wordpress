@@ -6,7 +6,6 @@ import {
   Container,
   PostTitle,
   Layout,
-  Header,
   PostBody,
   PostHeader,
   MoreStories,
@@ -27,7 +26,6 @@ export default function Post({ post, posts, preview }) {
   return (
     <Layout>
       <Container>
-        <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
