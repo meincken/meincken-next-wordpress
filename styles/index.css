@@ -147,3 +147,19 @@ h5 small,
 h6 small {
   font-size: 65%;
 }
+
+.brand {
+  @apply flex-none text-4xl font-semibold
+}
+
+.link {
+  @apply font-medium text-gray-400 py-6
+}
+
+.link:hover {
+  @apply text-gray-500
+}
+
+.wrapper {
+  max-width: 768px;
+}
