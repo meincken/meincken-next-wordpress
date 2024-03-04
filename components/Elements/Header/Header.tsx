@@ -1,12 +1,11 @@
 import { CMS_NAME } from "@/lib/constants"
-import styles from "../../../styles/header.module.css"
 
 export const Header = () => {
   return (
     <header className={`flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 sm:py-0 dark:bg-gray-800 dark:border-gray-700`}>
-      <nav className={`relative w-full mx-auto sm:flex sm:items-center sm:justify-between container ${styles.container}`} aria-label="Global">
+      <nav className={`relative w-full mx-auto sm:flex sm:items-center sm:justify-between container wrapper`} aria-label="Global">
         <div className="flex items-center justify-between">
-          <a className={`${styles.brand} dark:text-white`} href="/" aria-label="Brand">
+          <a className={`brand dark:text-white`} href="/" aria-label="Brand">
             {CMS_NAME}
           </a>
           <div className="sm:hidden">
@@ -22,8 +21,8 @@ export const Header = () => {
         </div>
         <div id="navbar-collapse-with-animation" className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
           <div className={`flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7`}>
-            <a className={styles.link} href="/about/">About</a>
-            <a className={styles.link} href="/blog/">Blog</a>
+            <a className={`link`} href="/about/">About</a>
+            <a className={`link`} href="/blog/">Blog</a>
           </div>
         </div>
       </nav>
