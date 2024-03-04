@@ -1,5 +1,5 @@
-import styles from './Header.modules.css'
 import { CMS_NAME } from "@/lib/constants"
+import styles from "./Header.module.css"
 
 export const Header = () => {
   return (
