@@ -1,8 +1,9 @@
 import Head from "next/head"
-import { Container, Layout, Header } from "@/components/Elements/"
+import { Container, Layout } from "@/components/Elements/"
 import { CMS_NAME } from "@/lib/constants"
+import fetch from "isomorphic-fetch"
 
-export default function Index() {
+const page = props => {
 
   return (
     <>
@@ -11,15 +12,23 @@ export default function Index() {
       </Head>
       <Layout>
         <Container>
-          <h1>{CMS_NAME} <small>test</small></h1>
-          <h2>{CMS_NAME} <small>test</small></h2>
-          <h3>{CMS_NAME} <small>test</small></h3>
-          <h4>{CMS_NAME} <small>test</small></h4>
-          <h5>{CMS_NAME} <small>test</small></h5>
-          <h6>{CMS_NAME} <small>test</small></h6>
-          <p></p>
+          <h1>{props.title.rendered}</h1>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: props.content.rendered,
+            }}
+          />
         </Container>
       </Layout>
     </>
   );
 }
+
+page.getInitialProps = async ({ query }) => {
+	const res = await fetch(`http://3.10.142.191/wp-json/wp/v2/pages?slug=index`);
+	let data = await res.json();
+	data = data[0];
+	return data;
+};
+
+export default page
